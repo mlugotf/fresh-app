@@ -1,0 +1,15 @@
+FROM denoland/deno:latest
+
+ARG GIT_REVISION
+ENV DENO_DEPLOYMENT_ID=${GIT_REVISION}
+
+WORKDIR /app
+
+COPY . .
+RUN deno install --allow-scripts
+RUN deno task build
+
+EXPOSE 9000
+
+# CHANGE THIS LINE TO MAIN.TS
+CMD ["deno", "run", "-A", "main.ts"]
