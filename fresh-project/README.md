@@ -19,5 +19,5 @@ This will watch the project directory and restart as necessary.
 ```
 Docker Stuff
 ```
-### Build docker Image with the following command
-docker build --build-arg GIT_REVISION="dev" -t fresh-project .
+### Build docker Image with the following command to get started
+docker compose up --build
