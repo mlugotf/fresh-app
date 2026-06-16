@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.fresh-gradient {
+  background-color: rgb(134, 239, 172);
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(219, 234, 254),
+    rgb(187, 247, 208),
+    rgb(254, 249, 195)
+  );
+}
+
+/* Angular glowing linear gradient */
+.monokai-gradient-screen {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #2d2a2e 0%, #ab9df2 50%, #ff6188 100%);
+}
