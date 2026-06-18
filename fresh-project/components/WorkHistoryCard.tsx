@@ -1,41 +1,29 @@
 /**
- * Purpose: Generates the card for the work history page
- * 
+ * Purpose: Generates a single card for the work history carousel
  * Author: Michael Lugo
  */
 
-type HistoryCard = {
+export type HistoryCard = {
   cardName: string;
   cardDescription: string;
   cardImg: string;
 };
 
-export default function WorkHistoryCards(
-  props: { historyCards: HistoryCard[] },
-) {
+export default function WorkHistoryCard(props: { card: HistoryCard }) {
+  const { card } = props;
   return (
-    <div className="flex flex-wrap gap-4">
-      {props.historyCards.map((card) => (
-        <div
-          key={card.cardName}
-          className="card bg-transparent w-full shadow-sm"
-        >
-          <figure>
-            <img
-              src={card.cardImg}
-              alt={card.cardName}
-            />
-          </figure>
-
-          <div className="card-body">
-            <h2 className="card-title">
-              {card.cardName}
-            </h2>
-
-            <p>{card.cardDescription}</p>
-          </div>
-        </div>
-      ))}
+    <div className='card bg-transparent w-full shadow-sm border border-gray-700'>
+      <figure className='px-4 pt-4'>
+        <img
+          src={card.cardImg}
+          alt={card.cardName}
+          className='rounded-xl h-[70%] w-full object-cover'
+        />
+      </figure>
+      <div className='card-body items-center text-center'>
+        <h2 className='card-title text-white'>{card.cardName}</h2>
+        <p className='text-gray-400'>{card.cardDescription}</p>
+      </div>
     </div>
   );
 }

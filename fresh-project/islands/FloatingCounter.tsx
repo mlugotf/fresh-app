@@ -37,7 +37,7 @@ export default function FloatingCounter() {
       <button
         type='submit'
         onClick={() => subtractValue()}
-        class='w-full bg-red-400 hover:bg-green-600 text-gray-900 font-bold py-1 px-3 rounded transition-colors text-sm'
+        class='w-full bg-red-400 hover:bg-red-600 text-gray-900 font-bold py-1 px-3 rounded transition-colors text-sm'
       >
         Decrement
       </button>

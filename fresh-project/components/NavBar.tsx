@@ -32,6 +32,7 @@ export function NavBar() {
             </details>
           </li> */}
           <li><a href='/workhistory'><button type='submit'>Work History</button></a></li>
+          <li><a href='/formsubmission'><button type='submit'>Form Submission</button></a></li>
         </ul>
       </div>
     </div>
